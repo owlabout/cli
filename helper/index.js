@@ -7,8 +7,9 @@ module.exports = {
     return path.basename(process.cwd())
   },
 
-  getBaseDir: () => {
-    return path.basename(path.dirname(fs.realpathSync(__filename)))
+  getRootDir: () => {
+    const dirname = path.dirname(fs.realpathSync(__filename))
+    return path.dirname(dirname)
   },
 
   isDir: filePath => {
