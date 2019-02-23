@@ -11,3 +11,10 @@ npx github:owlabout/cli install
 ```bash
 owl help
 ```
+
+## Development
+
+```bash
+git clone
+npx ./index install
+```
