@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const {exec} = require('child_process')
 
 module.exports = {
   getCwd: () => {
@@ -16,5 +17,23 @@ module.exports = {
     } catch (err) {
       return false
     }
+  },
+  exec: (command, output = false) => {
+    return new Promise((resolve, reject) => {
+      const child = exec(command, (error, stdout, stderr) => {
+        if (error) {
+          reject(error)
+          return
+        }
+        resolve({
+          stdout,
+          stderr,
+        })
+      })
+      if (output) {
+        child.stdout.pipe(process.stdout)
+        child.stderr.pipe(process.stderr)
+      }
+    })
   },
 }
