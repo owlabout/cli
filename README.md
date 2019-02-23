@@ -4,5 +4,10 @@ cli to manage everyday stuff.
 
 ```bash
 npx github:owlabout/cli install
+```
+
+## Usage
+
+```bash
 owl help
 ```
