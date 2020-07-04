@@ -16,5 +16,6 @@ owl help
 
 ```bash
 git clone
-npx ./index install
+npm install
+npx ./index.js install
 ```
