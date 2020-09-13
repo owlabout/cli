@@ -16,6 +16,6 @@
     "conf": "^2.2.0",
     "enquirer": "^2.3.6",
     "minimist": "^1.2.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
